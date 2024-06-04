@@ -1,0 +1,17 @@
+.buttonPrimary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+}
+
+.buttonPrimary:hover {
+  background-color: #0056b3;
+}
+
+.buttonSecondary {
+  background-color: #92d5ff;
+  color: #212121;
+  padding: 10px 20px;
+  border: none;
+}
