@@ -5,6 +5,7 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [name, setName] = useState("");
   console.log("Hello, World!");
 
   return (
@@ -29,7 +30,12 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <p>Hello, World!</p>
+      <p>Hello, {name} World!</p>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
     </>
   );
 }
