@@ -1,15 +1,11 @@
-import { Button } from "@/Button";
-// import { Header } from "@/components/ui/Header";
+import { Button } from "@/components/ui/Button";
+import { Header } from "@/components/ui/Header";
 
 export const Top = () => {
   return (
-    // <>
-    //   <Header />
-    //   <p>Top</p>
-    //   <Button variant="secondary">secondary</Button>
-    // </>
     <>
-      try-react
+      <Header />
+      <p>Top</p>
       <Button
         variant="primary"
         onClick={() => {
