@@ -1,4 +1,3 @@
-import { Form } from "@/components/model/Form";
 import { Header } from "@/components/ui/Header";
 
 export const Home = () => {
@@ -6,7 +5,6 @@ export const Home = () => {
     <>
       <Header />
       <p>Home</p>
-      <Form />
     </>
   );
 };
