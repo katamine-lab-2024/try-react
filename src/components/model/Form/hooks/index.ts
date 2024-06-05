@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormSchema, formSchema } from "./schema";
+import { FormSchema, formSchema } from "../util/schema";
 import { useEffect } from "react";
 
 export const useFormHook = () => {
@@ -25,6 +25,7 @@ export const useFormHook = () => {
     resolver: zodResolver(formSchema)
   });
 
+  // レンタリングの度に4回とか呼ばれてうざいので、errorsの変更時のみ呼ばれるようにした
   useEffect(() => {
     console.log("errors", errors);
   }, [errors]);
