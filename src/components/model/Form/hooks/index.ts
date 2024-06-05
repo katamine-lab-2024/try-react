@@ -1,9 +1,17 @@
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FormSchema, formSchema } from "../util/schema";
-import { useEffect } from "react";
+import { FormInputs } from "..";
 
 export const useFormHook = () => {
+  const [inputValue, setInputValue] = useState<FormInputs>({
+    requiredInput: "",
+    optionalInput: "",
+    requiredSelectValue: "",
+    optionalSelectValue: ""
+  });
+
   const {
     control,
     handleSubmit,
@@ -33,10 +41,11 @@ export const useFormHook = () => {
   // zodの値変換+型チェックを通過した場合のみonSubmitが呼ばれる
   const onSubmit = (data: FormSchema) => {
     // zodの値変換+型チェックを通過した値
-    console.log("data", data);
+    setInputValue(data);
   };
 
   return {
+    inputValue,
     form: {
       control,
       handleSubmit,
